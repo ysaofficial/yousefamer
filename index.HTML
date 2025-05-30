@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>بروفايل يوسف - احترافي</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(270deg, #667eea, #764ba2, #6b46c1, #667eea);
+    background-size: 800% 800%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #f0f0f5;
+  }
+
+  @keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 30px;
+    box-shadow:
+      0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 900px;
+    width: 100%;
+    padding: 40px 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+  }
+
+  /* الجانب الأيسر */
+  .left-panel {
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.6);
+    transition: transform 0.3s ease;
+    margin-bottom: 25px;
+  }
+  .profile-pic:hover {
+    transform: scale(1.05);
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f0f0f5;
+    text-shadow: 0 0 15px #9f7aea;
+    margin-bottom: 10px;
+  }
+  h3 {
+    color: #d1c4e9;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  p.bio {
+    font-size: 1.15rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    padding: 0 15px;
+  }
+
+  /* مهارات */
+  .skills {
+    text-align: right;
+  }
+  .skills h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #9f7aea;
+    width: fit-content;
+    color: #d1c4e9;
+    text-shadow: 0 0 10px #764ba2;
+  }
+  .skills ul {
+    list-style: none;
+    padding-right: 10px;
+  }
+  .skills ul li {
+    position: relative;
+    padding-right: 35px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #eee;
+    cursor: default;
+    transition: color 0.3s ease;
+  }
+  .skills ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9f7aea;
+    font-size: 1.3rem;
+    text-shadow: 0 0 8px #764ba2;
+  }
+  .skills ul li:hover {
+    color: #fff;
+  }
+
+  /* الجانب الأيمن */
+  .right-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* روابط التواصل */
+  .social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+  .social-links a {
+    width: 50px;
+    height: 50px;
+    background: #9f7aea;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 6px 20px rgba(159, 122, 234, 0.7);
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+  }
+  .social-links a:hover {
+    background: #764ba2;
+    transform: scale(1.25);
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.9);
+  }
+
+  /* نموذج التواصل */
+  form.contact-form {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  }
+  form.contact-form h2 {
+    color: #d1c4e9;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 3px solid #9f7aea;
+    padding-bottom: 8px;
+  }
+  form.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #eee;
+  }
+  form.contact-form input,
+  form.contact-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Cairo', sans-serif;
+    resize: vertical;
+    box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
+    transition: background 0.3s ease;
+  }
+  form.contact-form input:focus,
+  form.contact-form textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px #9f7aea;
+  }
+  form.contact-form button {
+    background: #9f7aea;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(159, 122, 234, 0.7);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  form.contact-form button:hover {
+    background: #764ba2;
+    transform: scale(1.05);
+  }
+
+  /* Responsive */
+  @media (max-width: 820px) {
+    .container {
+      grid-template-columns: 1fr;
+      padding: 30px 20px;
+    }
+    .right-panel {
+      margin-top: 40px;
+    }
+    .social-links {
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container" role="main" aria-label="ملف يوسف الشخصي">
+
+  <div class="left-panel">
+    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="صورة يوسف" class="profile-pic" />
+    <h1>يوسف</h1>
+    <h3>مبرمج ومصمم ومونتير</h3>
+    <p class="bio">أنا يوسف، أتعلم البرمجة والمونتاج وتصميم الشعارات خطوة بخطوة مع ChatGPT 💻🔥 أحب تطوير مهاراتي باستمرار وأشارك شغفي مع العالم.</p>
+
+    <section class="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">مهاراتي</h2>
+      <ul>
+        <li>مونتاج احترافي بالفيديو</li>
+        <li>تصميم شعارات بالفوتوشوب</li>
+        <li>إدارة حسابات السوشيال ميديا</li>
+        <li>ترجمة عربية - إنجليزية</li>
+      </ul>
+    </section>
+
+    <nav class="social-links" aria-label="روابط التواصل الاجتماعي">
+      <a href="https://www.youtube.com/@YsaQuran" target="_blank" rel="noopener" aria-label="يوتيوب">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://instagram.com/yousef_amer_official" target="_blank" rel="noopener" aria-label="إنستجرام">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/Yousef" target="_blank" rel="noopener" aria-label="تويتر">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://linkedin.com/in/yousef" target="_blank" rel="noopener" aria-label="لينكدإن">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </nav>
+  </div>
+
+  <div class="right-panel">
+    <form class="contact-form" aria-label="نموذج التواصل مع يوسف">
+      <h2>تواصل معي</h2>
+      <label for="name">الاسم</label>
+      <input type="text" id="name" name="name" placeholder="أدخل اسمك" required />
+      <label for="email">البريد الإلكتروني</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+      <label for="message">الرسالة</label>
+      <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
