@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youssef | Creative Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111;
+      --accent: #00b894;
+    }
+    body.dark {
+      --bg: #121212;
+      --text: #fff;
+      --accent: #00cec9;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .header {
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav a, #modeToggle {
+      text-decoration: none;
+      color: var(--text);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(to right, var(--accent), #55efc4);
+      color: #fff;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 25px;
+      margin-top: 1rem;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .section {
+      padding: 4rem 1rem;
+    }
+    .section.dark {
+      background: #f4f4f4;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: var(--bg);
+      border: 1px solid #ddd;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--bg);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Youssef</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="modeToggle">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container">
+      <h2>Creative Developer & Designer</h2>
+      <p>Building global experiences for modern brands</p>
+      <a href="#contact" class="btn">Let’s Work Together</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm Youssef — passionate about creating high-end digital experiences using HTML, CSS, JS & beyond. My work bridges creativity and code, delivering performance with elegance.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section dark">
+    <div class="container">
+      <h2>My Skills</h2>
+      <ul class="skills-grid">
+        <li>HTML5 / CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Responsive Design</li>
+        <li>UI/UX & Animations</li>
+        <li>React / Git / GitHub</li>
+        <li>Photoshop / CapCut</li>
+        <li>English-Arabic Translation</li>
+        <li>Logo Design</li>
+        <li>Social Media Management</li>
+        <li>Content Strategy</li>
+        <li>TikTok Growth</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects">
+        <div class="project-card">Portfolio Website</div>
+        <div class="project-card">Landing Page</div>
+        <div class="project-card">Business Profile</div>
+        <div class="project-card">Social Media Manager</div>
+        <div class="project-card">Logo Designer</div>
+        <div class="project-card">Translation Projects</div>
+        <div class="project-card">TikTok Campaign Strategy</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section dark">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: yosefsamy123414@gmail.com</p>
+      <a href="Youssef_CV.pdf" class="btn" download>Download CV</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Made with ❤️ by Youssef</p>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.getElementById('modeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
